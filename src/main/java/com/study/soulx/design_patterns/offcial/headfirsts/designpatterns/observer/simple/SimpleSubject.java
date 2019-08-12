@@ -1,8 +1,7 @@
 package com.study.soulx.design_patterns.offcial.headfirsts.designpatterns.observer.simple;
 
-import java.util.*;
-import java.util.Observer;
-
+import java.util.ArrayList;
+import com.study.soulx.design_patterns.offcial.headfirsts.designpatterns.observer.simple.*;
 public class SimpleSubject implements Subject {
 	private ArrayList<java.util.Observer> observers;
 	private int value = 0;
@@ -21,10 +20,21 @@ public class SimpleSubject implements Subject {
 			observers.remove(i);
 		}
 	}
-	
+
+
+	@Override
+	public void registerObserver(Observer o) {
+
+	}
+
+	@Override
+	public void removeObserver(Observer o) {
+
+	}
+
 	public void notifyObservers() {
-		for (Observer observer : observers) {
-			observer.update(value);
+		for (java.util.Observer observer : observers) {
+//			observer.update(value);
 		}
 	}
 	
