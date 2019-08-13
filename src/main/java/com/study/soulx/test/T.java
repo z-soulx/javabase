@@ -1,5 +1,8 @@
 package com.study.soulx.test;
 
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FilterInputStream;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
@@ -12,25 +15,10 @@ import java.util.concurrent.locks.ReentrantLock;
  **/
 public class T {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
         AtomicInteger a =new AtomicInteger();
 
-        Lock lock =new ReentrantLock();
-        lock.lock();
-     Thread t =    new Thread(()->{
-            System.out.println("sss");
-         try {
-             lock.lockInterruptibly();
-         } catch (InterruptedException e) {
-             e.printStackTrace();
-         }
-         System.out.println("jiesu");
-
-        });
-
-     t.start();
-        System.out.println("ss");
-     t.interrupt();
-        System.out.println("sssss");
+        FileReader reader = new FileReader("");
     }
+
 }
