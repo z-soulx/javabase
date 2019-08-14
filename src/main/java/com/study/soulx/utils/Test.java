@@ -7,7 +7,17 @@ package com.study.soulx.utils;
  * @create: 2019-07-28 20:00
  **/
 public class Test {
+    private String s = "ss";
+    private  final String ss ;
+    Test(){
+        ss = "s";
+    }
     public static void main(String[] args) {
 
     }
+
+
+
+
+
 }
