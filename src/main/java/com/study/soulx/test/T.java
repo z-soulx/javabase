@@ -1,6 +1,9 @@
 package com.study.soulx.test;
 
+import com.study.soulx.design_patterns.my_code.chapter_6.NoCommand;
+
 import java.io.FileNotFoundException;
+import java.util.stream.Stream;
 
 
 /**
@@ -12,10 +15,7 @@ import java.io.FileNotFoundException;
 public class T {
     public static void main(String[] args) {
 
-        Integer a = 127;
-
-        Integer b = 128;
-        System.out.println(a == b);
+        Stream.iterate(0, n->n+1).limit(7).forEach(r-> System.out.println(r));
     }
 
 
