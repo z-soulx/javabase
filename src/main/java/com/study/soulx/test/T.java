@@ -15,8 +15,10 @@ import java.util.stream.Stream;
  **/
 public class T {
     public static void main(String[] args) {
-
-        Stream.iterate(0, n->n+1).limit(7).forEach(r-> System.out.println(r));
+        int a = -3;
+        int b = 5;
+        System.out.println(Integer.toBinaryString(-3));
+        System.out.println(Integer.toBinaryString(a<<29));
     }
 
 
