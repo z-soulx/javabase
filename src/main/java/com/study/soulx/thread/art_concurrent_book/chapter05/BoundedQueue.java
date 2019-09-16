@@ -8,7 +8,7 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
- * 10-21
+ * 10-21 有界阻塞队列
  */
 public class BoundedQueue<T> {
     private Object[]  items;

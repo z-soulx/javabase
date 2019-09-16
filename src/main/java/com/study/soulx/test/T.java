@@ -15,10 +15,13 @@ import java.util.stream.Stream;
  **/
 public class T {
     public static void main(String[] args) {
-        int a = -3;
-        int b = 5;
-        System.out.println(Integer.toBinaryString(-3));
-        System.out.println(Integer.toBinaryString(a<<29));
+    synchronized (T.class){
+        try {
+            T.class.wait();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
     }
 
 

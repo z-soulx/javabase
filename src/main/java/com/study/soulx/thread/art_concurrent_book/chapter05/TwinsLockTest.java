@@ -5,13 +5,14 @@ package com.study.soulx.thread.art_concurrent_book.chapter05;
 
 import java.util.concurrent.locks.Lock;
 
-import chapter04.SleepUtils;
+import com.study.soulx.thread.art_concurrent_book.chapter04.SleepUtils;
+import org.junit.Test;
 
 /**
  * 10-11
  */
 public class TwinsLockTest {
-
+@Test
     public void test() {
         final Lock lock = new TwinsLock();
         class Worker extends Thread {
