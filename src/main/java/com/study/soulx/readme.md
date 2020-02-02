@@ -1,2 +1,2 @@
 # java 基础
-[基础算法](./algorithm/readme.md)
+[java编程基础](./src/main/java/com/study/soulx/java/base/readme.md)
