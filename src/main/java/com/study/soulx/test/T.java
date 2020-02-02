@@ -20,12 +20,7 @@ import java.util.stream.Stream;
  **/
 public class T {
     public static void main(String[] args) throws InvocationTargetException, IllegalAccessException {
-        T t = new T();
-        BitMap bitMap1 =  t.new BitMap(1);
-        bitMap1.setId(2);
-        BitMap bitMap2 =  t.new BitMap();
-        BeanUtils.copyProperties(bitMap2,bitMap1);
-        System.out.println(bitMap2);
+
     }
     class BitMap {
         Integer age;
