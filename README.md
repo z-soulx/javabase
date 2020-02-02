@@ -1,3 +1,2 @@
-# javabase
-java的基础操作，案例eg：反射，多线程等
-- 设计模式
+# java 基础
+[基础算法](./src/main/java/com/study/soulx/java/base/readme.md)
