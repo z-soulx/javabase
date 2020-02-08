@@ -2,6 +2,9 @@ package com.study.soulx.java.base;
 
 
 import javax.annotation.Resource;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 /**
  * @program: javabase
@@ -14,16 +17,9 @@ import javax.annotation.Resource;
 public class Test {
 
     public static void main(String[] args) {
-       String a ="";
-       switch (a){
-           case "ss":
-               System.out.println("ss");
-           case "s":
-               System.out.println("s");
-           default:
-
-       }
-
+        System.out.println(System.getProperty("os.name"));
+        Path p = Paths.get("src").toAbsolutePath();
+        System.out.println(Files.exists(p));
     }
 
   public <T>void Fx(T t){

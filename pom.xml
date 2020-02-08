@@ -92,6 +92,11 @@
       <artifactId>aspectjrt</artifactId>
       <version>1.8.13</version>
     </dependency>
+      <dependency>
+          <groupId>cglib</groupId>
+          <artifactId>cglib</artifactId>
+          <version>3.2.5</version>
+      </dependency>
 
 
   </dependencies>
@@ -126,6 +131,16 @@
         <configuration>
           <mainClass>com.study.soulx.MainApp</mainClass>
           <includePluginDependencies>false</includePluginDependencies>
+        </configuration>
+      </plugin>
+          <!--   下载源码插件-->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-eclipse-plugin</artifactId>
+        <version>2.9</version>
+        <configuration>
+          <downloadSources>true</downloadSources>
+          <downloadJavadocs>true</downloadJavadocs>
         </configuration>
       </plugin>
 
