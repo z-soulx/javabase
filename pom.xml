@@ -98,7 +98,11 @@
           <version>3.2.5</version>
       </dependency>
 
-
+    <dependency>
+      <groupId>algs4</groupId>
+      <artifactId>algs4</artifactId>
+      <systemPath>${project.basedir}/src/main/java/com/study/soulx/algorithm/algorithm4/official/algs4.jar</systemPath>
+    </dependency>
   </dependencies>
 
   <build>
