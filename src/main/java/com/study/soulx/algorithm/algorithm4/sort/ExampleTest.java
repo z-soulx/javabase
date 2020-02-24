@@ -16,12 +16,13 @@ interface Sort{ //排序的基本模板
 }
 /**
 * @Description: 官方排序 大致是性能递增 从shell开始就不是n^2级别了
- * @see Selection,Insertion,Shell,Merge,Quick,Heap
+ * @see Selection,Insertion,Shell,Merge,MergeBU,Quick,Heap
+ *                                       自低向上
 * @Author: soulx
 */
 public class ExampleTest {
     public static void main(String[] args) {
-
+        //原地归并 --c++内存交换容易实现
 
     }
 }
