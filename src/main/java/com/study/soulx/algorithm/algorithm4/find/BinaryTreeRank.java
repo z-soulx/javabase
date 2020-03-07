@@ -30,52 +30,79 @@ public class BinaryTreeRank <Key extends Comparable<Key>, Value> {
 
 
     //中序遍历
+
+    /**
+     * .中序遍历。   非递归中序遍历的思路如下：
+     *     1.先将根节点入栈
+     *     2.将当前节点的所有左孩子入栈，直到左孩子为空
+     *     3.访问栈顶元素，如果栈顶元素存在右孩子，则继续第2步
+     *     4.重复第2、3步，直到栈为空并且所有的节点都被访问
+     * @param root
+     */
     void middleTravelWithoutRecursion(Node root){
-
-
-        System.out.print("中序遍历:\t");
-        Stack<Node> stack = new Stack<Node>();
-
-        Node node = root;
-
-        while(node!=null||stack.size()>0){
-
-            while(node!=null){
-
-                stack.push(node);
-                node = node.left;
-            }
-
-            node = stack.pop();
-            System.out.print(node.data+"\t");
-
-            node = node.right;
+        if(root==null) {
+            System.out.println("空树");
+            return;
         }
-
+        Node tmp=root;
+        Stack<Node> s=new Stack<Node>();
+        while(tmp!=null || !s.isEmpty()) {
+            //1.将根节点入栈
+            //2.将所有左孩子入栈
+            while(tmp!=null) {
+                s.push(tmp);
+                tmp=tmp.left;
+            }
+            //3.访问栈顶元素
+            tmp=s.pop();
+            System.out.print(tmp.data+" ");
+            //4.如果栈顶元素存在右孩子，则将右孩子赋值给tmp，也就是将右孩子入栈
+            if(tmp.right!=null) {
+                tmp=tmp.right;
+            }
+            //否则，将tmp置为null，表示下次要访问的是栈顶元素
+            else {
+                tmp=null;
+            }
+        }
+        System.out.println();
 
     }
-    //前序遍历
+    //
+
+    /**
+     * 先序遍历。非递归先序遍历的思路如下：
+     *     1.先将根节点入栈
+     *     2.访问根节点
+     *     3.如果根节点存在右孩子，则将右孩子入栈
+     *     4.如果根节点存在左孩子，则将左孩子入栈（注意：一定是右孩子先入栈，然后左孩子入栈）
+     *     5.重复2-4
+     * @param root
+     */
      void beforeTravelWithoutRecursion(Node root){
 
-        System.out.print("\n前序遍历:\t");
-        Stack<Node> stack = new Stack<Node>();
+         if(root==null) {
+             System.out.println("空树");
+             return;
+         }
+         Node tmp=root;
+         Stack<Node> s=new Stack<Node>();
+         s.push(tmp);  //根节点入栈
+         while(!s.isEmpty()) {
+             //1.访问根节点
+             Node p=s.pop();
+             System.out.print(p.data+" ");
+             //2.如果根节点存在右孩子，则将右孩子入栈
+             if(p.right!=null) {
+                 s.push(p.right);
+             }
+             //3.如果根节点存在左孩子，则将左孩子入栈
+             if(p.left!=null) {
+                 s.push(p.left);
+             }
+         }
+         System.out.println();
 
-        Node node = root;
-
-        while(node!=null||!stack.isEmpty()){
-
-            while(node!=null){
-
-                stack.push(node);
-                System.out.print(node.data+"\t");
-                node = node.left;
-
-            }
-
-            node = stack.pop();
-            node = node.right;
-
-        }
 
     }
 
@@ -121,7 +148,27 @@ public class BinaryTreeRank <Key extends Comparable<Key>, Value> {
         }
         System.out.println();
     }
+    //后续2
+    public void postOrderTraverse(Node root) {
+        Node cur, pre = null;
 
+        Stack<Node> stack = new Stack<>();
+        stack.push(root);
+
+        while (!stack.isEmpty()) {
+            cur = stack.peek();
+            if ((cur.left == null && cur.right == null) || (pre != null && (pre == cur.left || pre == cur.right))) {
+                System.out.print(cur.data + "->");
+                stack.pop();
+                pre = cur;
+            } else {
+                if (cur.right != null)
+                    stack.push(cur.right);
+                if (cur.left != null)
+                    stack.push(cur.left);
+            }
+        }
+    }
 
     /**
      * 层次遍历
