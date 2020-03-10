@@ -14,7 +14,11 @@ public class MyGraph {
      *  有向图
      *  方法和无向基本相似
      * @see Digraph,SymbolDigraph,DirectedDFS,DepthFirstDirectedPaths,BreadthFirstDirectedPaths
-     * @see DirectedCycle
+     * @see DirectedCycle,Topological,DepthFirstOrder
+     * @see KosarajuSharirSCC,TransitiveClosure
+     *
+     * 加权
+     * @see EdgeWeightedGraph
      */
     public static void main(String[] args) {
 
