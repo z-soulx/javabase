@@ -18,7 +18,8 @@ public class MyGraph {
      * @see KosarajuSharirSCC,TransitiveClosure
      *
      * 加权
-     * @see EdgeWeightedGraph
+     * @see EdgeWeightedGraph,LazyPrimMST,PrimMST,KruskalMST
+     * @see DirectedEdge,EdgeWeightedDigraph,DijkstraSP,AcyclicSP,AcyclicLP,CPM
      */
     public static void main(String[] args) {
 
