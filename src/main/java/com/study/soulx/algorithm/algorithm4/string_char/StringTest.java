@@ -10,6 +10,7 @@ public class StringTest {
     /**
     * @Description:
      * @see Alphabet,LSD,MSD,Quick3string
+     * @see TrieST,TST
     */
     public static void main(String[] args) {
       //键索引计数法
