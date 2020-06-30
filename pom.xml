@@ -103,7 +103,40 @@
       <artifactId>algs4</artifactId>
       <systemPath>${project.basedir}/src/main/java/com/study/soulx/algorithm/algorithm4/official/algs4.jar</systemPath>
     </dependency>
+
+
+    <!-- serializer -->
+    <!-- fastjson -->
+    <dependency>
+      <groupId>com.alibaba</groupId>
+      <artifactId>fastjson</artifactId>
+      <version>1.2.60</version>
+    </dependency>
+
+    <!-- protostuff -->
+    <dependency>
+      <groupId>io.protostuff</groupId>
+      <artifactId>protostuff-core</artifactId>
+      <version>1.6.2</version>
+    </dependency>
+    <dependency>
+      <groupId>io.protostuff</groupId>
+      <artifactId>protostuff-runtime</artifactId>
+      <version>1.6.2</version>
+    </dependency>
+
+    <!-- kryo -->
+    <dependency>
+      <groupId>com.esotericsoftware</groupId>
+      <artifactId>kryo</artifactId>
+      <version>5.0.0-RC4</version>
+    </dependency>
+
+
   </dependencies>
+
+
+
 
   <build>
     <defaultGoal>install</defaultGoal>
