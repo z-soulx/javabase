@@ -14,8 +14,9 @@ public class BinarySearch {
 //        int[] num = {1,2,3,4,7,8,8,8,9};
 //        binarySearch3(num,6);
 //        binarySearch2(num,6);
-        int[] nums = {4,5,6,7,8,1,2,3};//升序
-        System.out.println(search(nums,8));
+//        int[] nums = {4,5,6,7,8,1,2,3};//升序
+        int[] nums = {1};//升序
+        System.out.println(search(nums,0));
     }
    /** 
    * @Description:   搜索旋转排序数组
@@ -40,7 +41,7 @@ public class BinarySearch {
                     }else {
                         low = mid+1;
                     }
-                } if(m<h){
+                } else{
                     if(target>m&&target<h){
                         low = mid+1;
                     }else {
