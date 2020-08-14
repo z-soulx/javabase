@@ -14,12 +14,14 @@ public class BinarySearch {
 //        int[] num = {1,2,3,4,7,8,8,8,9};
 //        binarySearch3(num,6);
 //        binarySearch2(num,6);
+        // 旋转排序数组
 //        int[] nums = {4,5,6,7,8,1,2,3};//升序
         int[] nums = {1};//升序
         System.out.println(search(nums,0));
     }
    /** 
-   * @Description:   搜索旋转排序数组
+   * @Description:   搜索旋转排序数组  升序但是某个点旋转
+    * 先判断左右 那边有序，再判断 target是否在有徐那边如果在就行遍历有序一边否则另一边
    * @Author: soulx 
    */
     public int search(int[] nums, int target) {
